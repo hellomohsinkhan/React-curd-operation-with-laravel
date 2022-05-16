@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/test', [App\Http\Controllers\Test::class,'index']);
+
+
 Route::view('/{path?}', 'app');
 

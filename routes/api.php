@@ -3,6 +3,13 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
+
+Route::post('/addCategory', [App\Http\Controllers\CategoryController::class,'store']);
+Route::get('/category', [App\Http\Controllers\CategoryController::class,'index']);
+Route::delete('/category/delete/{id}', [App\Http\Controllers\CategoryController::class,'destroy']);
+Route::get('/category/edit/{id}', [App\Http\Controllers\CategoryController::class,'edit']);
+Route::put('/category/update/{id}', [App\Http\Controllers\CategoryController::class,'update']);
 /*
 |--------------------------------------------------------------------------
 | API Routes
